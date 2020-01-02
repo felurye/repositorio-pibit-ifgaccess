@@ -19,7 +19,7 @@ void setup()
  pinMode(LED,OUTPUT);
  
  Serial.begin(9600);
- mySerial.begin(9600);
+ mySerial.begin(19200);
  SendCommand("AT+RST", "Ready");
  delay(5000);
 
@@ -27,6 +27,7 @@ void setup()
  SendCommand("AT+CIFSR", "OK");
  SendCommand("AT+CIPMUX=1","OK");
  SendCommand("AT+CIPSERVER=1,80","OK");
+
 }
  
 void loop(){
@@ -39,6 +40,8 @@ void loop(){
    IncomingString=mySerial.readString();
    StringReady= true;
   }
+ 
+
  
   if (StringReady){
     Serial.println("Received String: " + IncomingString);

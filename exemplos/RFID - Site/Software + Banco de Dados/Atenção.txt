@@ -1,0 +1,11 @@
+Para instalar o softare não apagar nenhum dos arquivos desta pasta
+
+
+Clicar com botão direito do mouse sobre o arquivo com nome
+" Controle de Acesso RFID " e enviar para >  area de trabalho e criar atalho"
+
+
+Em seguida caso deseje, pode trocar o icone clicando com botão direito do mouse, propriedades, 
+e inserir o icone da sua escolha.
+
+

@@ -7,8 +7,8 @@
 
 SoftwareSerial esp8266(2,3); ///OBJETO DO TIPO SoftwareSerial ( 2 = RX / 3 = TX)
 
-const int buttonPin = 1;
-const int ledPin = 7;
+const int buttonPin = 8;
+const int ledPin = 13;
 volatile byte state =LOW;
 
 String leituraAnalog1 = ""; //VARIÁVEL DO TIPO STRING
@@ -29,7 +29,7 @@ void setup(){
 
   
   //sendData("AT+CWMODE=1\r\n",1000,DEBUG); //CONFIGURA O ESP-01 NO MODO DE OPERAÇÃO 3 (AP + STA)
-  //sendData("AT+CWJAP_CUR=\"Mario\",\"Mario@132125\"r\n",8000,DEBUG); //COLOQUE OS DADOS DA SUA REDE SEM FIO (NOME DA REDE EM SUA_REDE_WIFI E A SENHA EM SENHA_REDE_WIFI)
+  sendData("AT+CWJAP_CUR=\"Redmi\",\"102030abc\"r\n",8000,DEBUG); //COLOQUE OS DADOS DA SUA REDE SEM FIO (NOME DA REDE EM SUA_REDE_WIFI E A SENHA EM SENHA_REDE_WIFI)
   sendData("AT+CIPMUX=1\r\n",1000,DEBUG); //HABILITA MULTIPLAS CONEXÕES
   sendData("AT+CIPSERVER=1,80\r\n",1000,DEBUG); //HABILITA A PORTA 80
   //sendData("AT+CIFSR\r\n",1000,DEBUG); //RETORNA O IP EM QUE O ESP-01 FOI ALOCADO (MODO STA OU STATION)
